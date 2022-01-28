@@ -1,0 +1,83 @@
+.flexbox-container {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 2rem 2rem;
+}
+
+.flexbox-container img {
+  -webkit-animation: ease-in animat 1s;
+          animation: ease-in animat 1s;
+}
+
+.flexbox-container div {
+  background: -webkit-gradient(linear, left top, left bottom, from(#eff0f1), color-stop(98%, #c0c5ca)), radial-gradient(at bottom, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background: linear-gradient(180deg, #eff0f1 0%, #c0c5ca 98%), radial-gradient(at bottom, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background-blend-mode: screen;
+  border-radius: 20px;
+  width: 400;
+}
+
+.flexbox-container > .flex-item > h4 {
+  color: white;
+  text-transform: uppercase;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(-20deg, #b9bdbc 0%, #8d8d8d 100%);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.flex-item:hover {
+  -webkit-box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
+  transition: -webkit-box-shadow 0.3s ease;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.flex-item:hover h4 {
+  background-image: linear-gradient(-20deg, #81f5d8 0%, #0fbbff 100%);
+  color: rgba(129, 87, 196, 0.658);
+}
+
+.flex-item img {
+  transition: -webkit-transform 0.3s ease;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.flex-item img:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1.1);
+}
+
+em {
+  color: white;
+}
+
+.imgPrincipal:hover {
+  -webkit-box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
+  transition: -webkit-box-shadow 0.3s ease;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.title-Card {
+  text-shadow: 0px 0px 2px rgba(34, 15, 141, 0.5);
+}
+/*# sourceMappingURL=style.css.map */
