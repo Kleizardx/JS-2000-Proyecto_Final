@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="En esta pagina vamos a practicar JS">
     <meta name="Keywords" content="Javascript">
-    <title>Test JS</title>
+    <title>Proyecto JS</title>
     <!-- Mi CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- CSS Bootstrap -->
@@ -17,8 +17,8 @@
 
 <body class="bg-light container-fluid text-center">
     <header class="card header_titulos">
-        <h1 class="text-uppercase header_titulos-Principal">JavaScript</h1>
-        <h2 class="header_titulos-Secundario">Comision 2000</h2>
+        <h1 class="text-uppercase header_titulos-Principal">Lucas Fernandez</h1>
+        <h2 class="header_titulos-Secundario">JavaScript - 2000</h2>
     </header>
 
     <main>
@@ -39,97 +39,81 @@
                             class="form-control text-center"
                             aria-label="Dollar amount (with dot and two decimal places)">
                     </div>
-                </div>
-                <div>
-                    <input class="btn btn-outline-success" type="button" value="Calcular" onclick="taxArg65();">
-                    <input class="btn btn-outline-danger" type="reset" value="Limpiar">
-                </div>
-            </div>
-            <form id="" class="" action="">
-                <div class="container justify-content-center">
-                    <div class="my-3">
-                        <p class=""><strong>Selecciona un juego</strong></p>
-                        <div class="my-3">
-                            <select id="listJuegos" class="form-select" aria-label="Default select example">
-                                <option selected id="">Juegos</option>
-                                <option id="1" value="1">Apex</option>
-                                <option id="2" value="2">Blasphemous</option>
-                                <option id="3" value="3">Dead Cells</option>
-                                <option id="4" value="4">Outlast</option>
-                                <option id="5" value="5">State of Decay 2</option>
-                                <option id="6" value="6">The Witcher 3</option>
-                                <option id="7" value="7">Dark Souls</option>
-                                <option id="8" value="8">Deadth's Door</option>
-                            </select>
-                        </div>
-                    </div>
                     <div>
-                        <input class="btn btn-outline-success" type="button" value="Calcular" onclick="taxList();">
+                        <input class="btn btn-outline-success" name="dato[]" type="button" value="Calcular"
+                            onclick="subValue()">
                         <input class="btn btn-outline-danger" type="reset" value="Limpiar">
                     </div>
                 </div>
-
-            <div class="container py-5">
-                <div class="flexbox-container">
-                    <div class="flex-item" data-aos="zoom-out-up">
-                        <h4 class="title-Card">Apex</h4>
-                        <img src="img/01-Apex.png" alt="Apex">
-                    </div>
-                    <div class="flex-item" data-aos="zoom-out-up">
-                        <h4 class="title-Card">Blasphemous</h4>
-                        <img src="img/02-Blasphemus.png" alt="Blasphemous">
-                    </div>
-                    <div class="flex-item" data-aos="zoom-out-up">
-                        <h4 class="title-Card">Dead Cells</h4>
-                        <img src="img/03-DeadCells.png" alt="Dead Cells">
-                    </div>
-                    <div class="flex-item" data-aos="zoom-out-up">
-                        <h4 class="title-Card">Outlast</h4>
-                        <img src="img/05-Outlast.png" alt="Outlast">
-                    </div>
-                    <div class="flex-item" data-aos="zoom-out-up">
-                        <h4 class="title-Card">State of Decay 2</h4>
-                        <img src="img/07-StateOfDecay2.png" alt="State of Decay 2">
-                    </div>
-                    <div class="flex-item" data-aos="zoom-out-up">
-                        <h4 class="title-Card">The Witcher 3</h4>
-                        <img src="img/08-TheWitcher3.png" alt="The Witcher 3">
-                    </div>
-                    <div class="flex-item" data-aos="zoom-out-up">
-                        <h4 class="title-Card">Dark Souls</h4>
-                        <img src="img/09 - Dark Souls.png" alt="Dark Souls">
-                    </div>
-                    <div class="flex-item" data-aos="zoom-out-up">
-                        <h4 class="title-Card">Death's Door</h4>
-                        <img src="img/10 - Death's Door.png" alt="Death's Door">
-                    </div>
-                </div> 
             </div>
 
-            <div class="container justify-content-center">
+            <div class="container justify-content-center container_Cuotas">
                 <div class="my-3">
-                    <p><strong>Paga en Cuotas</strong></p>
+                    <p><strong>Seleccionar algun juego de la lista</strong></p>
                     <select class="form-select" aria-label="Default select example">
                         <option selected id="lista">Desde 1 a 6 Cuotas con Interes</option>
-                        <option id="ct1" value="1">1 Cuota - 12%</option>
-                        <option id="ct3" value="2">3 Cuotas - 25%</option>
-                        <option id="ct6" value="3">6 Cuotas - 33%</option>
                     </select>
                 </div>
                 <div>
-                    <input class="btn btn-outline-info" type="button" value="Calcular Cuotas" name="button"
-                        onclick="taxArg65();">
+                    <input class="btn btn-outline-info mb-5" type="button" value="Calcular Cuotas" name="button"
+                        onclick="">
                 </div>
             </div>
 
-            <br>
+            <div>
+                <ul id="ul-product-list" class=" text-uppercase ">
+                </ul>
+            </div>
 
+
+            <div id="container_list-juegos" class="container flexbox-container byClass">
+                <div class="flex-item" data-aos="zoom-out-up">
+                    <h4 id="ApexCard" class="title-Card">Apex</h4>
+                    <img src="img/01-Apex.png" alt="Apex" id="img-Apex"
+                        onclick="Swal.fire('Seleccionaste', 'Apex Legends', 'success')">
+                </div>
+                <div class="flex-item" data-aos="zoom-out-up">
+                    <h4 class="title-Card">Blasphemous</h4>
+                    <img src="img/02-Blasphemus.png" alt="Blasphemous" id="img-Blasphemous"
+                        onclick="Swal.fire('Seleccionaste', 'Blasphemous', 'success')">
+                </div>
+                <div class="flex-item" data-aos="zoom-out-up">
+                    <h4 class="title-Card">Dead Cells</h4>
+                    <img src="img/03-DeadCells.png" alt="Dead Cells"
+                        onclick="Swal.fire('Seleccionaste', 'Dead Cells', 'success')">
+                </div>
+                <div class="flex-item" data-aos="zoom-out-up">
+                    <h4 class="title-Card">Outlast</h4>
+                    <img src="img/05-Outlast.png" alt="Outlast"
+                        onclick="Swal.fire('Seleccionaste', 'Outlast', 'success')">
+                </div>
+                <div class="flex-item" data-aos="zoom-out-up">
+                    <h4 class="title-Card">State of Decay 2</h4>
+                    <img src="img/07-StateOfDecay2.png" alt="State of Decay 2"
+                        onclick="Swal.fire('Seleccionaste', 'State of Decay 2', 'success')">
+                </div>
+                <div class="flex-item" data-aos="zoom-out-up">
+                    <h4 class="title-Card">The Witcher 3</h4>
+                    <img src="img/08-TheWitcher3.png" alt="The Witcher 3"
+                        onclick="Swal.fire('Seleccionaste', 'The Witcher 3', 'success')">
+                </div>
+                <div class="flex-item" data-aos="zoom-out-up">
+                    <h4 class="title-Card">Dark Souls</h4>
+                    <img src="img/09 - Dark Souls.png" alt="Dark Souls"
+                        onclick="Swal.fire('Seleccionaste', 'Dark Souls', 'success')">
+                </div>
+                <div class="flex-item" data-aos="zoom-out-up">
+                    <h4 class="title-Card">Death's Door</h4>
+                    <img src="img/10 - Death's Door.png" alt="Death's Door"
+                        onclick="Swal.fire('Seleccionaste', 'Death\'s Door', 'success')">
+                </div>
+            </div>
         </form>
 
     </main>
-    <script src="JS/test.js"></script>
-    <script src="JS/productos.js"></script>
-    <!-- <script src="/JS/carrito.js"></script> -->
+    <script type="module" src="JS/indexMain.js"></script>
+    <script src="./JS/func.js"></script>
+    <!-- Transiciones AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();</script>
     <!-- Sweet Alert -->
