@@ -22,8 +22,11 @@
     </header>
 
     <main>
-
-        <div><img src="img/iwm.png" class=" img-thumbnail my-3 imgPrincipal" alt="..."></div>
+        <div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                <img src="img/iwm.png" class=" img-thumbnail my-3 imgPrincipal">
+            </a>
+        </div>
 
         <div class="ext-light container d-flex card content bg-danger">
             <em>Percepciones e Impuestos</em>
@@ -46,71 +49,78 @@
                     </div>
                 </div>
             </div>
+        </form>
 
+        <form>
             <div class="container justify-content-center container_Cuotas">
                 <div class="my-3">
-                    <p><strong>Seleccionar algun juego de la lista</strong></p>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected id="lista">Desde 1 a 6 Cuotas con Interes</option>
-                    </select>
+                    <p>Comprar</p>
                 </div>
                 <div>
                     <input class="btn btn-outline-info mb-5" type="button" value="Calcular Cuotas" name="button"
                         onclick="">
                 </div>
             </div>
-
-            <div>
-                <ul id="ul-product-list" class=" text-uppercase ">
-                </ul>
-            </div>
-
-
-            <div id="container_list-juegos" class="container flexbox-container byClass">
-                <div class="flex-item" data-aos="zoom-out-up">
-                    <h4 id="ApexCard" class="title-Card">Apex</h4>
-                    <img src="img/01-Apex.png" alt="Apex" id="img-Apex"
-                        onclick="Swal.fire('Seleccionaste', 'Apex Legends', 'success')">
-                </div>
-                <div class="flex-item" data-aos="zoom-out-up">
-                    <h4 class="title-Card">Blasphemous</h4>
-                    <img src="img/02-Blasphemus.png" alt="Blasphemous" id="img-Blasphemous"
-                        onclick="Swal.fire('Seleccionaste', 'Blasphemous', 'success')">
-                </div>
-                <div class="flex-item" data-aos="zoom-out-up">
-                    <h4 class="title-Card">Dead Cells</h4>
-                    <img src="img/03-DeadCells.png" alt="Dead Cells"
-                        onclick="Swal.fire('Seleccionaste', 'Dead Cells', 'success')">
-                </div>
-                <div class="flex-item" data-aos="zoom-out-up">
-                    <h4 class="title-Card">Outlast</h4>
-                    <img src="img/05-Outlast.png" alt="Outlast"
-                        onclick="Swal.fire('Seleccionaste', 'Outlast', 'success')">
-                </div>
-                <div class="flex-item" data-aos="zoom-out-up">
-                    <h4 class="title-Card">State of Decay 2</h4>
-                    <img src="img/07-StateOfDecay2.png" alt="State of Decay 2"
-                        onclick="Swal.fire('Seleccionaste', 'State of Decay 2', 'success')">
-                </div>
-                <div class="flex-item" data-aos="zoom-out-up">
-                    <h4 class="title-Card">The Witcher 3</h4>
-                    <img src="img/08-TheWitcher3.png" alt="The Witcher 3"
-                        onclick="Swal.fire('Seleccionaste', 'The Witcher 3', 'success')">
-                </div>
-                <div class="flex-item" data-aos="zoom-out-up">
-                    <h4 class="title-Card">Dark Souls</h4>
-                    <img src="img/09 - Dark Souls.png" alt="Dark Souls"
-                        onclick="Swal.fire('Seleccionaste', 'Dark Souls', 'success')">
-                </div>
-                <div class="flex-item" data-aos="zoom-out-up">
-                    <h4 class="title-Card">Death's Door</h4>
-                    <img src="img/10 - Death's Door.png" alt="Death's Door"
-                        onclick="Swal.fire('Seleccionaste', 'Death\'s Door', 'success')">
-                </div>
-            </div>
         </form>
 
+        <div id="containerList">
+        </div>
+
+        <div id="container_list-juegos" class="container flexbox-container">
+            <div class="flex-item" data-aos="zoom-out-up">
+                <h4 id="ApexCard" class="card-header">Apex Legends</h4>
+                <h2 class="title-Card">Precio</h2>
+                <img src="img/01-Apex.png" alt="Apex" id="comprar"
+                    onclick="Swal.fire('Seleccionaste', 'Apex Legends', 'success')">
+            </div>
+            <div class="flex-item" data-aos="zoom-out-up">
+                <h4 class="card-header">Titulo</h4>
+                <h2 class="title-Card">Precio</h2>
+                <img src="img/02-Blasphemus.png" alt="Blasphemous" id="img-Blasphemous"
+                    onclick="Swal.fire('Seleccionaste', 'Blasphemous', 'success')">
+            </div>
+            <div class="flex-item" data-aos="zoom-out-up">
+                <h4 class="card-header">Titulo</h4>
+                <h2 class="title-Card">Precio</h2>
+                <img src="img/03-DeadCells.png" alt="Dead Cells"
+                    onclick="Swal.fire('Seleccionaste', 'Dead Cells', 'success')">
+            </div>
+            <div class="flex-item" data-aos="zoom-out-up">
+                <h4 class="card-header">Titulo</h4>
+                <h2 class="title-Card">Precio</h2>
+                <img src="img/05-Outlast.png" alt="Outlast" onclick="Swal.fire('Seleccionaste', 'Outlast', 'success')">
+            </div>
+            <div class="flex-item" data-aos="zoom-out-up">
+                <h4 class="card-header">Titulo</h4>
+                <h2 class="title-Card">Precio</h2>
+                <img src="img/07-StateOfDecay2.png" alt="State of Decay 2"
+                    onclick="Swal.fire('Seleccionaste', 'State of Decay 2', 'success')">
+            </div>
+            <div class="flex-item" data-aos="zoom-out-up">
+                <h4 class="card-header">Titulo</h4>
+                <h2 class="title-Card">Precio</h2>
+                <img src="img/08-TheWitcher3.png" alt="The Witcher 3"
+                    onclick="Swal.fire('Seleccionaste', 'The Witcher 3', 'success')">
+            </div>
+            <div class="flex-item" data-aos="zoom-out-up">
+                <h4 class="card-header">Titulo</h4>
+                <h2 class="title-Card">Precio</h2>
+                <img src="img/09 - Dark Souls.png" alt="Dark Souls"
+                    onclick="Swal.fire('Seleccionaste', 'Dark Souls', 'success')">
+            </div>
+            <div class="flex-item" data-aos="zoom-out-up">
+                <h4 class="card-header">Titulo</h4>
+                <h2 class="title-Card">Precio</h2>
+                <img src="img/10 - Death's Door.png" alt="Death's Door"
+                    onclick="Swal.fire('Seleccionaste', 'Death\'s Door', 'success')">
+            </div>
+        </div>
+
+
+
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="module" src="JS/indexMain.js"></script>
     <script src="./JS/func.js"></script>
     <!-- Transiciones AOS -->

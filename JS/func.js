@@ -4,10 +4,21 @@ function subValue() {
 
   tax65 = result * 1.65;
 
-  Swal.fire({
-    title: 'Valor total incluye 65% imp',
-    text: 'Total: $'+ `${tax65}`, 
-    icon: 'success',
-  });
+  if ( result == "" ) {
+    
+    Swal.fire(
+      'ERROR',
+      'Por favor ingresa los datos nuevamente',
+      'error'
+    )
+  } else {
+
+    Swal.fire({
+      title: 'Valor total incluye 65% imp',
+      text: 'Total: $'+ `${tax65}`, 
+      icon: 'success',
+    });
+  
+  }
 
 };

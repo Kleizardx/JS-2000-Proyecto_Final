@@ -6,27 +6,39 @@ import { Carrito } from "./carrito.js";
 
 // ----------------- //
 
-const carrito = new Carrito();
+ const carrito = new Carrito();
 
-//Funcion para escribir en el HTMl mediante mi lista en data.js
-// const listaContainer = document.getElementById("ul-product-list");
+const containerLi = document.getElementById("containerList");
 
-for (const item of productos) {
-  // const itemList = document.createElement("li");
+for (const producto of productos) { 
 
-  // itemList.innerText = item.nombre;
+//-----------Inicio Jquery--------------------------------
+/*   $("#containerList").append(`<h3> Titulo: ${producto.nombre}</h3>
+                              <b> $ ${producto.precio}</b>
+                              <p> ID: ${producto.id}</p>`); */
+//-----------Fin Jquery--------------------------------
 
-  // listaContainer.appendChild(itemList);
+// ----------------Js Vanilla --------------------------------
 
-  const img01 = document.getElementById("img-Apex") || document.getElementById("img-Blasphemous") ;
+  let itemList = document.createElement("div");
 
-  // 01 - Mediante addEventListener + function.
-  img01.addEventListener("click", function () {
+  //Definimos el innerHTML del elemento con una plantilla de texto, no se como vincular esto a mis cards ya generadas.
+  itemList.innerHTML = `<h3> Titulo: ${producto.nombre}</h3>
+                          <b> $ ${producto.precio}</b>
+                          <p> ID: ${producto.id}</p>`;
+  containerLi.appendChild(itemList);
 
-    console.log( item.nombre );
+  itemList.addEventListener("click", function () {
 
-    carrito.createItem( item );
+    console.log (producto.nombre);
+    carrito.createItem( producto );
 
-  });
+    Swal.fire({
+      title: `${producto.nombre}` + ' agregado al carro',
+      text: 'Total: $'+ `${producto.precio}`, 
+      icon: 'success',
+    });
 
-};
+  })
+
+}; 

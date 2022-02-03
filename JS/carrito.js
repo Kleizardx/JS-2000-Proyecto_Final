@@ -19,6 +19,14 @@ export class Carrito {
 
     createItem ( item ) {
 
+
+           //Si el item existe lo suma en +1
+
+           this.lista.push ({
+            item,
+            cantidad: 1
+          })
+
       //Agrega el item al carrito <> agregar item a this.lista
       this.lista.push( item ); //Le pasamos un push a this.lista para agregar nuestro item.
       localStorage.setItem( "carrito", JSON.stringify( this.lista )); //De esta forma se guardan los items del carrito en el local Storage.
@@ -40,25 +48,6 @@ export class Carrito {
       return item;
 
     }
-
-/*     //Este metodo la realidad es que esta mal, ya que estas "pisando" los datos al actualizar el item
-    //Lo ideal es hacerlo como la opcion updateItemX.S
-
-    updateItem ( itemId, itemUpdate) {
-
-      //Item + Item Actualizado, actualiza el valor de nuestro item.
-      
-      const item = this.findOneItemById( itemId );
-
-      const index = this.lista.indexOf ( item );
-      
-      this.lista[index] = itemUpdate;
-
-      this.lista[index].id = itemId;
-
-      // Este metodo esta bien cochino.
-
-    } */
 
     updateItemX ( itemId, nombre, precio, categoria ) {
 
