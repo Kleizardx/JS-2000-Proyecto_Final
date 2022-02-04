@@ -6,39 +6,48 @@ import { Carrito } from "./carrito.js";
 
 // ----------------- //
 
- const carrito = new Carrito();
+const carrito = new Carrito();
 
-const containerLi = document.getElementById("containerList");
+const containerLi = document.getElementById("container_list");
 
-for (const producto of productos) { 
-
-//-----------Inicio Jquery--------------------------------
-/*   $("#containerList").append(`<h3> Titulo: ${producto.nombre}</h3>
+// for (const producto of productos) {
+  //-----------Inicio Jquery--------------------------------
+  /*   $("#container_list-juegos").append(`<h3> Titulo: ${producto.nombre}</h3>
                               <b> $ ${producto.precio}</b>
                               <p> ID: ${producto.id}</p>`); */
-//-----------Fin Jquery--------------------------------
+  //-----------Fin Jquery--------------------------------
 
-// ----------------Js Vanilla --------------------------------
+  // ----------------Js Vanilla --------------------------------
 
-  let itemList = document.createElement("div");
+for (const producto of productos) {
+  //-----------Inicio Jquery--------------------------------
+  /*   $("#containerList").append(`<h3> Titulo: ${producto.nombre}</h3>
+                              <b> $ ${producto.precio}</b>
+                              <p> ID: ${producto.id}</p>`); */
+  //-----------Fin Jquery--------------------------------
+
+  // ----------------Js Vanilla --------------------------------
+  let itemList = document.createElement("div"); 
+  itemList.setAttribute ("id", "container_list-juegos")
+  itemList.className = "container";
+  itemList.className = "flexbox-container";
 
   //Definimos el innerHTML del elemento con una plantilla de texto, no se como vincular esto a mis cards ya generadas.
-  itemList.innerHTML = `<h3> Titulo: ${producto.nombre}</h3>
-                          <b> $ ${producto.precio}</b>
-                          <p> ID: ${producto.id}</p>`;
+  itemList.innerHTML = `  <div class="flex-item" data-aos="zoom-out-up">
+                          <h4 class="card-header">${producto.nombre}</h4>
+                          <h2 class="title-Card">${producto.precio}</h2>
+                          <img src="${producto.thumbnailUrl}"</img>`;
+
   containerLi.appendChild(itemList);
 
   itemList.addEventListener("click", function () {
-
-    console.log (producto.nombre);
-    carrito.createItem( producto );
+    console.log(producto.nombre);
+    carrito.createItem(producto);
 
     Swal.fire({
-      title: `${producto.nombre}` + ' agregado al carro',
-      text: 'Total: $'+ `${producto.precio}`, 
-      icon: 'success',
+      title: `${producto.nombre}` + " agregado al carro",
+      text: "Total: $" + `${producto.precio}`,
+      icon: "success",
     });
-
-  })
-
-}; 
+  });
+}
