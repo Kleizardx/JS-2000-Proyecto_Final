@@ -4,6 +4,8 @@ function subValue() {
 
   tax65 = result * 1.65;
 
+  tax65a = parseInt(tax65);
+
   if ( result == "" ) {
     
     Swal.fire(
@@ -15,7 +17,7 @@ function subValue() {
 
     Swal.fire({
       title: 'Valor total incluye 65% imp',
-      text: 'Total: $'+ `${tax65}`, 
+      text: 'Total: $'+ `${tax65a}`, 
       icon: 'success',
     });
   

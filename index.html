@@ -15,11 +15,14 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-<body class="bg-light container-fluid text-center">
+<body id="up" class="bg-light text-center">
+
     <header class="card header_titulos">
         <h1 class="text-uppercase header_titulos-Principal">Lucas Fernandez</h1>
         <h2 class="header_titulos-Secundario">JavaScript - 2000</h2>
     </header>
+
+    <nav> NAV </nav>
 
     <main>
         <div>
@@ -51,6 +54,9 @@
             </div>
         </form>
 
+        <div id="container_list" class="container flexbox-container">
+        </div>
+
         <form>
             <div class="container justify-content-center container_Cuotas">
                 <div class="my-3">
@@ -59,14 +65,36 @@
                 <div>
                     <input class="btn btn-outline-info mb-5" type="button" value="Realizar Compra" name="button"
                         onclick="">
+                    <input class="btn btn-outline-warning mb-5" type="button" value="Limpiar Carrito" name="button"
+                        onclick="">
                 </div>
             </div>
         </form>
 
-        <div id="container_list" class="container flexbox-container">
-        </div>
-
     </main>
+
+    <!-- Footer -->
+
+    <footer class="container-fluid">
+        
+            <img src="img/contact_support_black_48dp.svg" width="3%" alt="Inbox">
+        
+        <div class="container">
+            <em class="container card bg-info">Informacion de Contacto</em>
+            <ul class="container my-3 align-content-center footer_contacto-a">
+                 <a href="#up">Ir Arriba</a> 
+                 <a href="mailto:lucas.fernandez32zs@gmail.com">EMAIL</a> 
+                <!-- Para enviar mails, utilizar mailto:email -->
+                 <a href="https://wa.me/5491138053409/?text=Hola%20Lucas,%20necesito%20informacion!"
+                        target="_blank">Telefono</a> 
+                <!-- Para enviar mensajes directos utilizar, https://wa.me/numero de telefono, sin + -->
+                <!-- Para abrir una nueva pesta#a en blanco, target="_blank" -->
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="module" src="JS/indexMain.js"></script>
@@ -76,7 +104,10 @@
     <script>AOS.init();</script>
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
+
+
 
 
 </html>
