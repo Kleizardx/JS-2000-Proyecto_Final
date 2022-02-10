@@ -1,3 +1,45 @@
+/* ================= Inicio Nav */
+
+.header_titulos {
+  text-transform: uppercase;
+  border-radius: 25px;
+  font-style: bolder;
+  margin: 3px 0px;
+  padding: 1rem 3rem;
+  background-image: linear-gradient(to bottom, #de81f583 0%, #0fbbff80 100%);
+  letter-spacing: 2px;
+  font-weight: 500;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.header_titulos:hover {
+  background-color: rgba(187, 231, 245, 0.733);
+  box-shadow: 0px 15px 20px rgba(27, 207, 231, 0.4);
+  border-radius: 45px;
+  transform: translateY(7px);
+  transition: all 0.5s ease;
+}
+
+.header_titulos > a {
+  color: #000;
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+
+.header_titulos > a:hover {
+  color: #fff;
+  font-size: 35px;
+  transition: all 0.3s linear;
+}
+
+.nav_titulos-Secundario:hover {
+  text-shadow: 0px 1px 3px rgba(97, 97, 97, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ================= Fin Nav */
+
 .flexbox-container {
   text-align: center;
   display: -webkit-box;
@@ -5,28 +47,44 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   gap: 2rem 2rem;
 }
 
 .flexbox-container img {
   -webkit-animation: ease-in animat 1s;
-          animation: ease-in animat 1s;
+  animation: ease-in animat 1s;
 }
 
 .flexbox-container div {
-  background: -webkit-gradient(linear, left top, left bottom, from(#eff0f1), color-stop(98%, #c0c5ca)), radial-gradient(at bottom, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
-  background: linear-gradient(180deg, #eff0f1 0%, #c0c5ca 98%), radial-gradient(at bottom, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#eff0f1),
+      color-stop(98%, #c0c5ca)
+    ),
+    radial-gradient(
+      at bottom,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  background: linear-gradient(180deg, #eff0f1 0%, #c0c5ca 98%),
+    radial-gradient(
+      at bottom,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
   background-blend-mode: screen;
   border-radius: 20px;
   width: 400;
-} 
+}
 
 .flexbox-container > .flex-item > h4 {
   color: white;
@@ -40,7 +98,7 @@
 
 .flex-item:hover {
   -webkit-box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
   transition: -webkit-box-shadow 0.3s ease;
   -webkit-transition: -webkit-box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
@@ -68,9 +126,14 @@ em {
   color: white;
 }
 
+em:hover {
+  box-shadow: 0px 3px 20px rgba(86, 86, 87, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
 .imgPrincipal:hover {
   -webkit-box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
   transition: -webkit-box-shadow 0.3s ease;
   -webkit-transition: -webkit-box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
@@ -80,17 +143,33 @@ em {
 .title-Card {
   text-shadow: 0px 0px 2px rgba(34, 15, 141, 0.5);
 }
-/*# sourceMappingURL=style.css.map */
 
 .footer_contacto-a > a {
   font-style: bolder;
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  padding: 5px;
   margin: 5px 0px;
-  background-image: linear-gradient(-50deg, #81f5d883 0%, #0fbbff80 100%);
-  border-radius: 10px
+  padding: 1.3em 3em;
+  background-image: linear-gradient(-50deg, #de81f583 0%, #0fbbff80 100%);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
 
-} a:link {
+.footer_contacto-a > a:hover {
+  background-color: #df2ee5;
+  box-shadow: 0px 15px 20px rgba(46, 208, 229, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+a:link {
   text-decoration: none;
 }

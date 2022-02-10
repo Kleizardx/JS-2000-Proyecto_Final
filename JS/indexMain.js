@@ -58,6 +58,7 @@ for (const producto of productos) {
         });
         console.log(producto.nombre);
         carrito.createItem(producto);
+
       }
     });
   });

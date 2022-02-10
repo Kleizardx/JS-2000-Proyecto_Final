@@ -17,17 +17,20 @@
 
 <body id="up" class="bg-light text-center">
 
-    <header class="card header_titulos">
-        <h1 class="text-uppercase header_titulos-Principal">Lucas Fernandez</h1>
-        <h2 class="header_titulos-Secundario">JavaScript - 2000</h2>
+    <header class="container header_titulos">
+        <a href="https://www.linkedin.com/in/lucasf32zs/" target="_blank">Lucas Fernandez</a>
     </header>
 
-    <nav> NAV </nav>
+    <nav>
+        <div class="container my-3">
+            <h2 class="nav_titulos-Secundario">JavaScript - 2000</h2>
+        </div>
+    </nav>
 
     <main>
         <div>
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-                <img src="img/iwm.png" class=" img-thumbnail my-3 imgPrincipal">
+                <img src="img/iwm.png" class="img-thumbnail my-3 imgPrincipal">
             </a>
         </div>
 
@@ -38,7 +41,7 @@
         <form id="" class="" action="">
             <div class="container justify-content-center">
                 <div class="my-3">
-                    <p class=""><strong>Ingrese el valor del protucto</strong></p>
+                    <p class=""><strong>Podes ingresar el valor de un juego que no se encuentre en la lista</strong></p>
                     <div class="input-group mb-3">
                         <span class="input-group-text">$</span>
                         <input type="number" placeholder="Ingresar el monto (ARS)" id="importe1"
@@ -62,6 +65,8 @@
                 <div class="my-3">
                     <h3>Carrito de compras</h3>
                 </div>
+                <div id="formTableCar">
+                </div>
                 <div>
                     <input class="btn btn-outline-info mb-5" type="button" value="Realizar Compra" name="button"
                         onclick="">
@@ -76,17 +81,17 @@
     <!-- Footer -->
 
     <footer class="container-fluid">
-        
-            <img src="img/contact_support_black_48dp.svg" width="3%" alt="Inbox">
-        
+
+        <img src="img/contact_support_black_48dp.svg" width="3%" alt="Inbox">
+
         <div class="container">
             <em class="container card bg-info">Informacion de Contacto</em>
             <ul class="container my-3 align-content-center footer_contacto-a">
-                 <a href="#up">Ir Arriba</a> 
-                 <a href="mailto:lucas.fernandez32zs@gmail.com">EMAIL</a> 
+                <a href="#up">Ir Arriba</a>
+                <a href="mailto:lucas.fernandez32zs@gmail.com">EMAIL</a>
                 <!-- Para enviar mails, utilizar mailto:email -->
-                 <a href="https://wa.me/5491138053409/?text=Hola%20Lucas,%20necesito%20informacion!"
-                        target="_blank">Telefono</a> 
+                <a href="https://wa.me/5491138053409/?text=Hola%20Lucas,%20necesito%20informacion!"
+                    target="_blank">Telefono</a>
                 <!-- Para enviar mensajes directos utilizar, https://wa.me/numero de telefono, sin + -->
                 <!-- Para abrir una nueva pesta#a en blanco, target="_blank" -->
             </ul>
