@@ -17,22 +17,19 @@
 
 <body id="up" class="bg-light text-center">
 
-    <header class="container header_titulos">
+    <header class="container-fluid header_titulos">
         <a href="https://www.linkedin.com/in/lucasf32zs/" target="_blank">Lucas Fernandez</a>
     </header>
 
     <nav>
-        <div class="container my-3">
-            <h2 class="nav_titulos-Secundario">JavaScript - 2000</h2>
+        <div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                <img src="img/iwm.png" class="img-thumbnail my-4 imgPrincipal">
+            </a>
         </div>
     </nav>
 
     <main>
-        <div>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-                <img src="img/iwm.png" class="img-thumbnail my-3 imgPrincipal">
-            </a>
-        </div>
 
         <div class="ext-light container d-flex card content bg-danger">
             <em>Percepciones e Impuestos</em>
@@ -80,21 +77,41 @@
 
     <!-- Footer -->
 
-    <footer class="container-fluid">
-
-        <img src="img/contact_support_black_48dp.svg" width="3%" alt="Inbox">
-
-        <div class="container">
-            <em class="container card bg-info">Informacion de Contacto</em>
-            <ul class="container my-3 align-content-center footer_contacto-a">
-                <a href="#up">Ir Arriba</a>
-                <a href="mailto:lucas.fernandez32zs@gmail.com">EMAIL</a>
-                <!-- Para enviar mails, utilizar mailto:email -->
-                <a href="https://wa.me/5491138053409/?text=Hola%20Lucas,%20necesito%20informacion!"
-                    target="_blank">Telefono</a>
+    <footer class="container align-content-center justify-content-center text-center">
+        <div class="container row col-md-12 py-5">
+            <div>
+                <h2>Contacto</h2>
+            </div>
+            <ul class="my-3 footer_contacto-a list-unstyled">
+                <li>
+                    <a href="#up" class="py-1 d-block">Ir Arriba</a>
+                </li>
+                <li>
+                    <a href="mailto:lucas.fernandez32zs@gmail.com" class="py-1 d-block">EMAIL</a>
+                </li>
+                <li>
+                    <a href="https://wa.me/5491138053409/?text=Hola%20Lucas,%20necesito%20informacion!" target="_blank"
+                        class="py-1 d-block">Telefono</a>
+                </li>
                 <!-- Para enviar mensajes directos utilizar, https://wa.me/numero de telefono, sin + -->
-                <!-- Para abrir una nueva pesta#a en blanco, target="_blank" -->
             </ul>
+            <div class="container col-md-12">
+                <form action="#">
+                    <div class="form-group m-1">
+                        <input type="text" class="form-control" placeholder="Nombre">
+                    </div>
+                    <div class="form-group m-1">
+                        <input type="text" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group m-1">
+                        <textarea name="" id="" cols="30" rows="3" class="form-control"
+                            placeholder="Mensaje"></textarea>
+                    </div>
+                    <div class="form-group m-1">
+                        <button type="submit" class="form-control px-3">Enviar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </footer>
 
