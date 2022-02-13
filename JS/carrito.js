@@ -3,25 +3,19 @@
 
 export class Carrito {
 
-    constructor(  ) {
-
+    constructor() {
       this.lista = JSON.parse(localStorage.getItem("carrito")) || []; 
       // this.lista = lista;
-
     }
 
-    listAllItems ( ) {
-
+    listAllItems() {
       //Muestra todo el listado de items cargados <> devolviendo this.lista
       return this.lista;
-
     }
 
-    createItem ( item ) {
-
+    createItem(item) {
 
            //Si el item existe lo suma en +1
-
            this.lista.push ({
             item,
             cantidad: 1
@@ -34,8 +28,7 @@ export class Carrito {
 
     }
 
-    findOneItemById ( itemId ) {
-
+    findOneItemById(itemId) {
       //Busca un item en la lista <> Encuentra un item en this.lista y lo muestra.
       //Solo devuelve el ID del item.
 
@@ -78,7 +71,6 @@ export class Carrito {
     }
 
     delItem ( itemId ) {
-
       //Borra el item. <> dentro de this.lista.
 
       const item = this.findOneItemById( itemId );
