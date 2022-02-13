@@ -21,13 +21,15 @@ fetch(jsonDataA)
     itemList.className = "flexbox-container";
   
     //Definimos el innerHTML del elemento con una plantilla de texto, no se como vincular esto a mis cards ya generadas.
-    itemList.innerHTML = `  <div class="flex-item" data-aos="zoom-out-up">
+   itemList.innerHTML = `  <div class="flex-item" data-aos="zoom-out-up">
                             <h4 class="card-header">${producto.nombre}</h4>
                             <h2 class="title-Card">$${producto.precio}</h2>
                             <img src="${producto.thumbnailUrl}"</img>`;
   
     containerLi.appendChild(itemList);
-  
+
+    // ----------------Js Vanilla --------------------------------
+
     itemList.addEventListener("click", function () {
       Swal.fire({
         title: "Estas por agregar " + `${producto.nombre}`,
@@ -46,11 +48,12 @@ fetch(jsonDataA)
           });
           console.log(producto.nombre);
           carrito.createItem(producto);
-  
+
         }
       });
     });
   }
   console.log(data);
 })
+
 

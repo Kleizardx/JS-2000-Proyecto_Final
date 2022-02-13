@@ -25,7 +25,6 @@ export class Carrito {
       this.lista.push( item ); //Le pasamos un push a this.lista para agregar nuestro item.
       localStorage.setItem( "carrito", JSON.stringify( this.lista )); //De esta forma se guardan los items del carrito en el local Storage.
       //Al utilizar el JSON con su metodo stringify, convierete todo mi obejto a un string, el cual nuestro localStorage, puede leer.
-
     }
 
     findOneItemById(itemId) {
